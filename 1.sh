@@ -2,7 +2,7 @@
 
 if [ ! "$#" -eq 3 ];
 then
-    echo "ARGUMENT"
+    echo "Usage: $0 <file> <pattern> <replacement>"
     exit 1
 fi
 
