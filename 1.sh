@@ -19,4 +19,7 @@ replace=$3
 sed -i '/^[[:space:]]*$/d' $file &> /dev/null
 sed -i "s/$pattern/$replace/g" $file &> /dev/null
 sed -i 'n;d' $file &> /dev/null
+
+count_lines=$(sed -n '$=' $file)
+echo "Файл $file содержит $count_lines строк"
 exit 0
